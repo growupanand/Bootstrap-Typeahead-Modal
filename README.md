@@ -17,10 +17,10 @@ Add Typeahead modal in Page
       <div class="modal-body">
         <form name="typeahead_form" id="typeahead_form">
           <input type="hidden" name="table_name"/>
-          <input type="hidden" name="data_column"/>
+          <input type="hidden" name="query_column"/>
           <input type="hidden" name="input_id"/>
           <input type="hidden" name="link"/>
-          <input onkeyup="typeahead_getdata()" class="form-control" type="text" name="query" />
+          <input onkeyup="typeahead_getdata()" class="form-control" type="text" name="query_value" />
         </form>
       <div class="list-group" id="typeahead_result_list"></div>
       </div>
@@ -31,8 +31,8 @@ Add Typeahead modal in Page
 call typeahead by `typeahead_modal(link, input_id, table_name, data_column)`
 
 ```html
-<input class="form-control" id="name_id" name="Name" type="text" />
-<button class="btn btn-outline-secondary" type="button" onclick="typeahead_modal('ajax','name_id', 'persons', ['name'])">SELECT</button>
+<input class="form-control" id="person_id" name="ID" type="hidden" />
+<button class="btn btn-outline-secondary" type="button" onclick="typeahead_modal('ajax','person_id', 'table_persons', ['first_name','last_name'])">SELECT</button>
 ```
 
 # Server side
