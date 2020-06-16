@@ -52,8 +52,17 @@ def ajax():
    
    if task == 'typeahead':
        table_name = request.form['table_name']
-       data_column = request.form['data_column'].split(',')
-       query = request.form['query']
-       result_list = database.select_data(table_name,data_column,"WHERE name like '" + query + "%'")
-       return json.dumps(result_list)
+        query_column = request.form['query_column']
+        get_column = request.form['query_column'].split(',')
+        get_column.append('ID')
+        query_value = request.form['query_value']
+        query_string = ''
+        i = 0;
+        for column in request.form['query_column'].split(','):
+            if i > 0:
+                query_string += " OR "
+            query_string += str(column) + " like '"+query_value+"%'"
+            i += 1
+        result_list = database.select_data(table_name, get_column, "WHERE "+query_string)
+        return json.dumps(result_list)
 ```
