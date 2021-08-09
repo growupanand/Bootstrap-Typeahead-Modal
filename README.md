@@ -1,6 +1,6 @@
-typeahead_modal
+Bootstrap-Typeahead-Modal
 ---------------
-Javascript module for using typeahead with twitter bootstrap 4.
+Use this Javascript Library for using Bootstrap-4 typeahead in Modal Window.
 
 
 Usage
