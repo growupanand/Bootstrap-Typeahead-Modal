@@ -1,6 +1,6 @@
 Bootstrap-Typeahead-Modal
 ---------------
-Use this Javascript Library for using Bootstrap-4 typeahead in Modal Window.
+Use this Jquery Plugin for using Bootstrap-4 typeahead in Modal Window.
 
 
 Usage
